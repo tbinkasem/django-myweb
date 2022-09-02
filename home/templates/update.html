@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Update STUDENT</title>
+    </head>
+    <body>
+        <h2>Update STUDENT</h2>
+        <form action="updateData/{{ myHomes.id }}" method="post">
+            {% csrf_token %}
+            FIRST NAME : <br>
+            <input type="text" name="fname" value="{{ myHomes.fname }}">
+            <br>
+            LAST NAME : <br>
+            <input type="text" name="lname" value="{{ myHomes.lname }}">
+            <br>
+            DEP NAME : <br>
+            <input type="text" name="depname" value="{{ myHomes.depname }}">
+            <br>
+            GPA : <br>
+            <input type="text" name="gpa" value="{{ myHomes.gpa }}">
+            <br><br>
+            <input type="submit" value="UPDATE DATA" onClick="alert('ยืนยันปรับปรุงข้อมูล')">    
+        </form>
+    </body>
+</html>

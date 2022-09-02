@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <style>
+            table{
+                width: 50%;
+                border: 1px dotted green;
+            }
+            tr,th,td{
+                border: 1px dotted green;
+            }
+            button{
+                background-color: green;
+                border-radius: 15px;
+                width: 100px;
+                height: 30px;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Data Student</h2>
+        <table>
+            <tr>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>DEP NAME</th>
+                <th>GPA</th>
+                <th></th>
+            </tr>
+            {% for a in myHomes %}
+            <tr>
+                <td>{{ a.fname }}</td>
+                <td>{{ a.lname }}</td>
+                <td>{{ a.depname }}</td>
+                <td>{{ a.gpa }}</td>
+                <td>
+                    <a style="color: red" href="delData/{{ a.id }}">DELETE</a>
+                    <a style="color: green" href="update/{{ a.id }}">UPDATE</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <button>
+            <a href="add/">ADD DATA</a>
+        </button>
+    </body>
+</html>
