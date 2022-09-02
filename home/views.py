@@ -41,6 +41,7 @@ def update(request, id):
     return HttpResponse(template.render(context,request))
 
 def updateData(request, id):
+    # test git hub
     a = request.POST['fname']
     b = request.POST['lname']
     c = request.POST['depname']
